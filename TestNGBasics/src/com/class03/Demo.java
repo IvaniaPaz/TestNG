@@ -3,10 +3,8 @@ package com.class03;
 import org.openqa.selenium.By;
 import org.testng.annotations.*;
 
-
-
-import com.class01.CommonMethods;
-import com.class01.Constants;
+import com.utils.CommonMethods;
+import com.utils.Constants;
 
 public class Demo extends CommonMethods{
 
@@ -18,6 +16,7 @@ public class Demo extends CommonMethods{
 	public void closeBrowser() {
 		driver.quit();
 	}
+	
 	@Test
 	public void TitleValidation() {
 		String expectedTitle="Human Management System";

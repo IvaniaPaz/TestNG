@@ -5,8 +5,8 @@ import org.testng.annotations.*;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import com.class01.CommonMethods;
-import com.class01.Constants;
+import com.utils.CommonMethods;
+import com.utils.Constants;
 
 public class ClassTask1 extends CommonMethods {
 

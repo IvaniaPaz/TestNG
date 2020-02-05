@@ -1,11 +1,16 @@
-package com.class01;
+package com.utils;
 
+import java.io.File;
+import java.io.IOException;
 import java.util.concurrent.TimeUnit;
 
+import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.NoSuchFrameException;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -35,17 +40,14 @@ public class CommonMethods {
 		} else {
 			System.err.println("Browser not supported");
 		}
-	
+
 		driver.manage().window().maximize();
 		driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		driver.get(url);
 		return driver;
-		
-	}
-	
-	
 
+	}
 
 	/**
 	 * This method will accept the alert
@@ -103,71 +105,89 @@ public class CommonMethods {
 	 */
 	public static void switchToFrame(String nameOrId) {
 		try {
-		driver.switchTo().frame(nameOrId);
-		}catch(NoSuchFrameException e) {
-		System.out.println("Frame is not present");	
+			driver.switchTo().frame(nameOrId);
+		} catch (NoSuchFrameException e) {
+			System.out.println("Frame is not present");
 		}
 	}
-	
-	
+
 	/**
 	 * This method will switch to the frame
 	 * 
 	 * @param element
 	 */
 	public static void switchToFrame(WebElement element) {
-		try{
+		try {
 			driver.switchTo().frame(element);
-		}catch(NoSuchFrameException e) {
-			System.out.println("Frame is not present");		
-	 }
+		} catch (NoSuchFrameException e) {
+			System.out.println("Frame is not present");
+		}
 	}
-	
+
 	/**
 	 * This method will switch to the frame
 	 * 
 	 * @param index
 	 */
 	public static void switchToFrame(int index) {
-		try{
+		try {
 			driver.switchTo().frame(index);
-		}catch(NoSuchFrameException e) {
-			System.out.println("Frame is not present");		
-	 }
+		} catch (NoSuchFrameException e) {
+			System.out.println("Frame is not present");
+		}
 	}
-	
+
 	/**
 	 * This method will click on the element using JSExecutor
+	 * 
 	 * @param element
 	 */
 	public static void jsClick(WebElement element) {
-		JavascriptExecutor js=(JavascriptExecutor) driver;
-		js.executeScript("arguments[0].click();",element);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].click();", element);
 	}
+
 	/**
 	 * This method will scroll page until specified element
+	 * 
 	 * @param element
 	 */
 	public static void scrollIntoElement(WebElement element) {
-		JavascriptExecutor js=(JavascriptExecutor) driver;
-		js.executeScript("arguments[0].scrollIntoView(true);",element);
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("arguments[0].scrollIntoView(true);", element);
 	}
+
 	/**
-	 * This method will scroll page down 
+	 * This method will scroll page down
+	 * 
 	 * @param pixel
 	 */
 	public static void scrollDown(int pixel) {
-		JavascriptExecutor js=(JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,"+pixel+")");
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0," + pixel + ")");
 	}
+
 	/**
 	 * This method will scroll page up
+	 * 
 	 * @param pixel
 	 */
 	public static void scrollUp(int pixel) {
-		JavascriptExecutor js=(JavascriptExecutor) driver;
-		js.executeScript("window.scrollBy(0,-"+pixel+")");
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		js.executeScript("window.scrollBy(0,-" + pixel + ")");
 	}
-	
-	
+/**
+ * This method will take a screenshot
+ * @param fileName
+ */
+	public static void takeScreenshot(String fileName) {
+		TakesScreenshot ts = (TakesScreenshot) driver;
+		File file = ts.getScreenshotAs(OutputType.FILE);
+		try {
+			FileUtils.copyFile(file, new File("ScreenShots/" + fileName + ".png"));
+		} catch (IOException e) {
+			System.out.println("Cannot take a screenshot");
+		}
+	}
+
 }

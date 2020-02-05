@@ -3,6 +3,9 @@ package com.class01;
 import org.openqa.selenium.By;
 import org.testng.annotations.*;
 
+import com.utils.CommonMethods;
+import com.utils.Constants;
+
 public class TitleLogoAndLoginVerification extends CommonMethods {
 
 	@BeforeMethod(alwaysRun = true)

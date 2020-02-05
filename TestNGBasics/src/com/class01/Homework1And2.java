@@ -5,6 +5,9 @@ import org.openqa.selenium.WebElement;
 import org.testng.Assert;
 import org.testng.annotations.*;
 
+import com.utils.CommonMethods;
+import com.utils.Constants;
+
 //TC 1: HRMS Application Login: 
 //
 //Open chrome browser

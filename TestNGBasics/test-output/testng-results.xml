@@ -1,48 +1,44 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="1" ignored="0" total="2" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="21475" started-at="2020-01-12T14:44:39 EST" finished-at="2020-01-12T14:45:00 EST">
+  <suite name="Default suite" duration-ms="24415" started-at="2020-01-16T21:51:03 EST" finished-at="2020-01-16T21:51:28 EST">
     <groups>
+      <group name="regression">
+        <method signature="LoginAndTitle.logoValidation()[pri:0, instance:com.class04.LoginAndTitle@3b0143d3]" name="logoValidation" class="com.class04.LoginAndTitle"/>
+        <method signature="LoginAndTitle.titleValidation()[pri:0, instance:com.class04.LoginAndTitle@3b0143d3]" name="titleValidation" class="com.class04.LoginAndTitle"/>
+      </group> <!-- regression -->
     </groups>
-    <test name="Default test" duration-ms="21475" started-at="2020-01-12T14:44:39 EST" finished-at="2020-01-12T14:45:00 EST">
-      <class name="com.class02.ClassTask1">
-        <test-method status="PASS" signature="open()[pri:0, instance:com.class02.ClassTask1@3b0143d3]" name="open" is-config="true" duration-ms="12266" started-at="2020-01-12T14:44:39 EST" finished-at="2020-01-12T14:44:51 EST">
+    <test name="Default test" duration-ms="24415" started-at="2020-01-16T21:51:03 EST" finished-at="2020-01-16T21:51:28 EST">
+      <class name="com.class04.LoginAndTitle">
+        <test-method status="PASS" signature="openAndNavigate()[pri:0, instance:com.class04.LoginAndTitle@3b0143d3]" name="openAndNavigate" is-config="true" duration-ms="11841" started-at="2020-01-16T21:51:03 EST" finished-at="2020-01-16T21:51:15 EST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- open -->
-        <test-method status="FAIL" signature="login()[pri:1, instance:com.class02.ClassTask1@3b0143d3]" name="login" duration-ms="8490" started-at="2020-01-12T14:44:51 EST" finished-at="2020-01-12T14:45:00 EST">
-          <exception class="org.openqa.selenium.InvalidArgumentException">
+        </test-method> <!-- openAndNavigate -->
+        <test-method status="PASS" signature="logoValidation()[pri:0, instance:com.class04.LoginAndTitle@3b0143d3]" name="logoValidation" duration-ms="92" started-at="2020-01-16T21:51:15 EST" finished-at="2020-01-16T21:51:15 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- logoValidation -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.class04.LoginAndTitle@3b0143d3]" name="closeBrowser" is-config="true" duration-ms="613" started-at="2020-01-16T21:51:15 EST" finished-at="2020-01-16T21:51:16 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method status="PASS" signature="openAndNavigate()[pri:0, instance:com.class04.LoginAndTitle@3b0143d3]" name="openAndNavigate" is-config="true" duration-ms="11177" started-at="2020-01-16T21:51:16 EST" finished-at="2020-01-16T21:51:27 EST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openAndNavigate -->
+        <test-method status="FAIL" signature="titleValidation()[pri:0, instance:com.class04.LoginAndTitle@3b0143d3]" name="titleValidation" duration-ms="7" started-at="2020-01-16T21:51:27 EST" finished-at="2020-01-16T21:51:27 EST">
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[invalid argument: File not found : C:\Users\Ivania Paz\Desktop\cat.png
-  (Session info: chrome=79.0.3945.117)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
-System info: host: 'LAPTOP-5A7V3BBH', ip: '192.168.1.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\IVANIA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58609}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: d4fd8448846510412a7cab05940e012d]]>
+              <![CDATA[Titles are NOT matched expected [Human Management Systems] but found [Human Management System]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.InvalidArgumentException: invalid argument: File not found : C:\Users\Ivania Paz\Desktop\cat.png
-  (Session info: chrome=79.0.3945.117)
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:25:48'
-System info: host: 'LAPTOP-5A7V3BBH', ip: '192.168.1.30', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '1.8.0_221'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 79.0.3945.117, chrome: {chromedriverVersion: 79.0.3945.36 (3582db32b3389..., userDataDir: C:\Users\IVANIA~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58609}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
-Session ID: d4fd8448846510412a7cab05940e012d
-at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
-at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
-at java.lang.reflect.Constructor.newInstance(Unknown Source)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:106)
-at com.class02.ClassTask1.login(ClassTask1.java:47)
+              <![CDATA[java.lang.AssertionError: Titles are NOT matched expected [Human Management Systems] but found [Human Management System]
+at org.testng.Assert.fail(Assert.java:97)
+at org.testng.Assert.assertEqualsImpl(Assert.java:136)
+at org.testng.Assert.assertEquals(Assert.java:118)
+at org.testng.Assert.assertEquals(Assert.java:575)
+at com.class04.LoginAndTitle.titleValidation(LoginAndTitle.java:24)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -73,15 +69,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.InvalidArgumentException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.class02.ClassTask1@3b0143d3]" name="close" is-config="true" duration-ms="667" started-at="2020-01-12T14:45:00 EST" finished-at="2020-01-12T14:45:00 EST">
+        </test-method> <!-- titleValidation -->
+        <test-method status="PASS" signature="closeBrowser()[pri:0, instance:com.class04.LoginAndTitle@3b0143d3]" name="closeBrowser" is-config="true" duration-ms="644" started-at="2020-01-16T21:51:27 EST" finished-at="2020-01-16T21:51:28 EST">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- close -->
-      </class> <!-- com.class02.ClassTask1 -->
+        </test-method> <!-- closeBrowser -->
+      </class> <!-- com.class04.LoginAndTitle -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
